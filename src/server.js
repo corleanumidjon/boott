@@ -276,7 +276,7 @@ bot.on("message", async (msg) => {
      if(language == "🇺🇿"){
       await bot.sendMessage(
         chatId,
-        `Qaysi qismga o'zgartirish kiritmoqchisiz?`,
+        `Qaysi qismga o'zgartirish kiritmoqchisiz!`,
         {
           reply_markup: {
             keyboard: [
@@ -290,7 +290,7 @@ bot.on("message", async (msg) => {
      }else if (language == "🇷🇺"){
       await bot.sendMessage(
         chatId,
-        `Какую часть вы хотите изменить?`,
+        `Какую часть вы хотите изменить!`,
         {
           reply_markup: {
             keyboard: [
@@ -304,7 +304,7 @@ bot.on("message", async (msg) => {
      }else if (language == "🇬🇧"){
       await bot.sendMessage(
         chatId,
-        `Which part do you want to change?`,
+        `Which part do you want to change!`,
         {
           reply_markup: {
             keyboard: [
@@ -337,7 +337,7 @@ bot.on("message", async (msg) => {
       if(language == "🇺🇿"){
         await bot.sendMessage(
           chatId,
-          `Yangi ${change.text.toLocaleLowerCase()}ni kiriting.\nFormat: ${
+          `Yangi ${change.text.toLocaleLowerCase()}ni kiriting!.\nFormat: ${
             change.text == "Kontakt"
               ? "+998937444463"
               : change.text == "INN raqam"
@@ -357,7 +357,7 @@ bot.on("message", async (msg) => {
       }else if(language == "🇷🇺"){
         await bot.sendMessage(
           chatId,
-          `новый ${change.text.toLocaleLowerCase()}входить\nФормат: ${
+          `новый ${change.text.toLocaleLowerCase()}входить!\nФормат: ${
             change.text == "Контакт"
               ? "+9989937444463"
               : change.text == "ИНН номер"
@@ -374,7 +374,7 @@ bot.on("message", async (msg) => {
       }else if (language == "🇬🇧"){
         await bot.sendMessage(
           chatId,
-          `New ${change.text.toLocaleLowerCase()}enter.\nFormat: ${
+          `New ${change.text.toLocaleLowerCase()}enter!.\nFormat: ${
             change.text == "Contact"
               ? "+998937444463"
               : change.text == "INN number"
@@ -395,7 +395,7 @@ bot.on("message", async (msg) => {
           if (msg.text.length == 9 && !isNaN(+msg.text)) {
             users[chatId].inn = msg.text;
             step++;
-            await bot.sendMessage(chatId, "Muvaffaqqiyatli o'zgartitrildi!", {
+            await bot.sendMessage(chatId, "Muvaffaqiyatli o'zgar trildi!", {
               reply_markup: {
                 keyboard: [
                   [{ text: "🔝 Bosh sahifa" }, { text: "🔙 Ortga qaytish" }],
@@ -414,7 +414,7 @@ bot.on("message", async (msg) => {
             users[chatId].contact = msg.text;
             step++;
   
-            await bot.sendMessage(chatId, "Muvaffaqqiyatli o'zgartitrildi!", {
+            await bot.sendMessage(chatId, "Muvaffaqiyatli o'zgar trildi!", {
               reply_markup: {
                 keyboard: [
                   [{ text: "🔝 Bosh sahifa" }, { text: "🔙 Ortga qaytish" }],
@@ -431,7 +431,7 @@ bot.on("message", async (msg) => {
         } 
         } else if(change.text == "Ism") {
           users[chatId].username = msg.text;
-          await bot.sendMessage(chatId, "Muvaffaqqiyatli o'zgartitrildi!", {
+          await bot.sendMessage(chatId, "Muvaffaqiyatli o'zgar trildi!", {
             reply_markup: {
               keyboard: [
                 [{ text: "🔝 Bosh sahifa" }, { text: "🔙 Ortga qaytish" }],
@@ -446,7 +446,7 @@ bot.on("message", async (msg) => {
           if (msg.text.length == 9 && !isNaN(+msg.text)) {
             users[chatId].inn = msg.text;
             step++;
-            await bot.sendMessage(chatId, "Конвертировано успешно!", {
+            await bot.sendMessage(chatId, "Успешное изменение произошло!", {
               reply_markup: {
                 keyboard: [
                   [{ text: "🔝 Главное меню" }, { text: "🔙 Возвращаться" }],
@@ -465,7 +465,7 @@ bot.on("message", async (msg) => {
             users[chatId].contact = msg.text;
             step++;
   
-            await bot.sendMessage(chatId, "Конвертировано успешно!", {
+            await bot.sendMessage(chatId, "Успешное изменение произошло!", {
               reply_markup: {
                 keyboard: [
                   [{ text: "🔝 Главное меню" }, { text: "🔙 Возвращаться" }],
@@ -481,7 +481,7 @@ bot.on("message", async (msg) => {
           }
         } else  if (change.text == "Имя") {
           users[chatId].username = msg.text;
-          await bot.sendMessage(chatId, "Конвертировано успешно!", {
+          await bot.sendMessage(chatId, "Успешное изменение произошло!", {
             reply_markup: {
               keyboard: [
                 [{ text: "🔝 Главное меню" }, { text: "🔙 Возвращаться" }],
@@ -495,7 +495,7 @@ bot.on("message", async (msg) => {
           if (msg.text.length == 9 && !isNaN(+msg.text)) {
             users[chatId].inn = msg.text;
             step++;
-            await bot.sendMessage(chatId, "Changed successfully!", {
+            await bot.sendMessage(chatId, "Successful change!", {
               reply_markup: {
                 keyboard: [
                   [{ text: "🔝 Main menu" }, { text: "🔙 Go back" }],
@@ -516,7 +516,7 @@ bot.on("message", async (msg) => {
             users[chatId].contact = msg.text;
             step++;
   
-            await bot.sendMessage(chatId, "Converted successfully!", {
+            await bot.sendMessage(chatId, "Successful change!", {
               reply_markup: {
                 keyboard: [
                   [{ text: "🔝 Main menu" }, { text: "🔙 Go back" }],
@@ -533,7 +533,7 @@ bot.on("message", async (msg) => {
         }
         else if (change.text == "Name") {
           users[chatId].username = msg.text;
-          await bot.sendMessage(chatId, "Converted successfully!", {
+          await bot.sendMessage(chatId, "Successful change!", {
             reply_markup: {
               keyboard: [
                 [{ text: "🔝  Main menu" }, { text: "🔙 Go back" }],
@@ -946,7 +946,7 @@ bot.on("message", async (msg) => {
                 keyboard: [
                   [
                     { text: "Buyurtma berish ✅" },
-                    { text: "🔙 Ortga qaytish" },
+                  
                   ],
                 ],
                 resize_keyboard: true,
@@ -966,7 +966,7 @@ bot.on("message", async (msg) => {
                 keyboard: [
                   [
                     { text: "Разместить заказ ✅" },
-                    { text: "🔙 Возвращаться" },
+                 
                   ],
                 ],
                 resize_keyboard: true,
@@ -984,7 +984,7 @@ bot.on("message", async (msg) => {
             {
               reply_markup: {
                 keyboard: [
-                  [{ text: "Place an order ✅" }, { text: "🔙 Go back" }],
+                  [{ text: "Place an order ✅" }, ],
                 ],
                 resize_keyboard: true,
                 one_time_keyboard: true,
@@ -1041,17 +1041,17 @@ bot.on("message", async (msg) => {
       if (language == "🇺🇿") {
         await bot.sendMessage(
           admin,
-          `Mijoz ismi: ${users[chatId].username},\nTelegram: @${users[chatId].link},\nTelefon raqami: ${users[chatId].contact},\n Companiya INN : ${users[chatId].inn},\n Narxi : ${users[chatId].order.price},\n Yuk ogirligi : ${users[chatId].order.weight}t,\n Ip olchami : ${users[chatId].order.size}`
+          `Mijoz ismi: ${users[chatId].username},\nTelefon raqami: ${users[chatId].contact}\nTelegram: @${users[chatId].link}\nCompaniya INN: ${users[chatId].inn}\nIp o'lchami: ${users[chatId].order.size}\nYuk og'irligi: ${users[chatId].order.weight} tonna\nNarxi: ${users[chatId].order.price}`
         );
       } else if (language == "🇷🇺") {
         await bot.sendMessage(
           admin,
-          `Имя Клиента: ${users[chatId].username},\nTelegram: @${users[chatId].link},\nНомер телефона: ${users[chatId].contact},\n Компания ИНН: ${users[chatId].inn},\n Расходы : ${users[chatId].order.price},\n Вес нагрузки : ${users[chatId].order.weight}т,\n Размер нити : ${users[chatId].order.size}`
+          `Имя Клиента: ${users[chatId].username},\nНомер телефона: ${users[chatId].contact}\nТелеграмма: @${users[chatId].link}\nКомпания ИНН: ${users[chatId].inn}\nРазмер нити: ${users[chatId].order.size}\nВес груза: ${users[chatId].order.weight} тонны\nРасходы: ${users[chatId].order.price}`
         );
       } else if (language == "🇬🇧") {
         await bot.sendMessage(
           admin,
-          `Customer name: ${users[chatId].username},\n Telegram: @${users[chatId].link},\nPhone number: ${users[chatId].contact},\n Company INN : ${users[chatId].inn},\nCost : ${users[chatId].order.price},\nLoad weight : ${users[chatId].order.weight}t,\n Thread size : ${users[chatId].order.size}`
+          `Customer name: ${users[chatId].username},\nPhone number: ${users[chatId].contact}\nTelegram: @${users[chatId].link}\nCompany INN: ${users[chatId].inn}\nThread size: ${users[chatId].order.size}\nCargo weight: ${users[chatId].order.weight} tons\nCost: ${users[chatId].order.price}`
         );
       }
       step = 3;
@@ -1082,3 +1082,6 @@ bot.on("contact", async (msg) => {
     console.log(error.message);
   }
 });
+
+
+
