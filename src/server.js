@@ -337,7 +337,7 @@ bot.on("message", async (msg) => {
       if(language == "🇺🇿"){
         await bot.sendMessage(
           chatId,
-          `Yangi ${change.text.toLocaleLowerCase()}ni kiriting!.\nFormat: ${
+          `Yangi ${change.text.toLocaleLowerCase()}ni kiriting!\nFormat: ${
             change.text == "Kontakt"
               ? "+998937444463"
               : change.text == "INN raqam"
@@ -357,7 +357,7 @@ bot.on("message", async (msg) => {
       }else if(language == "🇷🇺"){
         await bot.sendMessage(
           chatId,
-          `новый ${change.text.toLocaleLowerCase()}входить!\nФормат: ${
+          `Hовый ${change.text.toLocaleLowerCase()}входить!\nФормат: ${
             change.text == "Контакт"
               ? "+9989937444463"
               : change.text == "ИНН номер"
@@ -374,7 +374,7 @@ bot.on("message", async (msg) => {
       }else if (language == "🇬🇧"){
         await bot.sendMessage(
           chatId,
-          `New ${change.text.toLocaleLowerCase()}enter!.\nFormat: ${
+          `New ${change.text.toLocaleLowerCase()}enter!\nFormat: ${
             change.text == "Contact"
               ? "+998937444463"
               : change.text == "INN number"
@@ -591,15 +591,15 @@ bot.on("message", async (msg) => {
     } else if (step === 4 && msg.text === "📞 Aloqa") {
       await bot.sendMessage(
         chatId,
-        "Biz bilan bog'lanish uchun: \n📞 +998931636006"
+        "Biz bilan bog'lanish uchun! \n📞 +998931636006"
       );
     } else if (step === 4 && msg.text === "📞 Контакт") {
       await bot.sendMessage(
         chatId,
-        "Чтобы связаться с нами: \n📞 +998931636006"
+        "Чтобы связаться с нами!\n📞 +998931636006"
       );
     } else if (step === 4 && msg.text === "📞 Contact") {
-      await bot.sendMessage(chatId, "To contact us: \n📞 +998931636006");
+      await bot.sendMessage(chatId, "To contact us! \n📞 +998931636006");
     } else if (step === 4 && msg.text === "Biz haqimizda 📌") {
       await bot.sendMediaGroup(chatId, [
         {
