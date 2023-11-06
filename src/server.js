@@ -184,7 +184,7 @@ bot.on("message", async (msg) => {
             reply_markup: {
               keyboard: [
                 [{ text: "Покупка ✅" }, { text: "📞 Контакт" }],
-                [{ text: "O нас 📌" }, { text: "Мой профайл" }],
+                [{ text: "O нас 📌" }, { text: "Мой профиль" }],
               ],
               resize_keyboard: true,
               one_time_keyboard: true,
@@ -234,7 +234,7 @@ bot.on("message", async (msg) => {
           );
         }
         step = 20;
-     }else if(msg.text == "Мой профайл" && step == 4) {
+     }else if(msg.text == "Мой профиль" && step == 4) {
       if(language == "🇷🇺"){
        await bot.sendMessage(
          chatId,
@@ -276,7 +276,7 @@ bot.on("message", async (msg) => {
      if(language == "🇺🇿"){
       await bot.sendMessage(
         chatId,
-        `Qaysi qismga o'zgartirish kiritmoqchisiz!`,
+        `Qaysi qismga o'zgartirish kiritmoqchisiz?`,
         {
           reply_markup: {
             keyboard: [
@@ -290,7 +290,7 @@ bot.on("message", async (msg) => {
      }else if (language == "🇷🇺"){
       await bot.sendMessage(
         chatId,
-        `Какую часть вы хотите изменить!`,
+        `Какую часть вы хотите изменить?`,
         {
           reply_markup: {
             keyboard: [
@@ -304,7 +304,7 @@ bot.on("message", async (msg) => {
      }else if (language == "🇬🇧"){
       await bot.sendMessage(
         chatId,
-        `Which part do you want to change!`,
+        `Which part do you want to change?`,
         {
           reply_markup: {
             keyboard: [
@@ -395,7 +395,7 @@ bot.on("message", async (msg) => {
           if (msg.text.length == 9 && !isNaN(+msg.text)) {
             users[chatId].inn = msg.text;
             step++;
-            await bot.sendMessage(chatId, "Muvaffaqiyatli o'zgar trildi!", {
+            await bot.sendMessage(chatId, "Muvaffaqiyatli o'zgartirildi😊!", {
               reply_markup: {
                 keyboard: [
                   [{ text: "🔝 Bosh sahifa" }, { text: "🔙 Ortga qaytish" }],
@@ -414,7 +414,7 @@ bot.on("message", async (msg) => {
             users[chatId].contact = msg.text;
             step++;
   
-            await bot.sendMessage(chatId, "Muvaffaqiyatli o'zgar trildi!", {
+            await bot.sendMessage(chatId, "Muvaffaqiyatli o'zgartirildi😊!", {
               reply_markup: {
                 keyboard: [
                   [{ text: "🔝 Bosh sahifa" }, { text: "🔙 Ortga qaytish" }],
@@ -431,7 +431,7 @@ bot.on("message", async (msg) => {
         } 
         } else if(change.text == "Ism") {
           users[chatId].username = msg.text;
-          await bot.sendMessage(chatId, "Muvaffaqiyatli o'zgar trildi!", {
+          await bot.sendMessage(chatId, "Muvaffaqiyatli o'zgartirildi😊!", {
             reply_markup: {
               keyboard: [
                 [{ text: "🔝 Bosh sahifa" }, { text: "🔙 Ortga qaytish" }],
@@ -446,7 +446,7 @@ bot.on("message", async (msg) => {
           if (msg.text.length == 9 && !isNaN(+msg.text)) {
             users[chatId].inn = msg.text;
             step++;
-            await bot.sendMessage(chatId, "Успешное изменение произошло!", {
+            await bot.sendMessage(chatId, "Изменено успешно😊!", {
               reply_markup: {
                 keyboard: [
                   [{ text: "🔝 Главное меню" }, { text: "🔙 Возвращаться" }],
@@ -465,7 +465,7 @@ bot.on("message", async (msg) => {
             users[chatId].contact = msg.text;
             step++;
   
-            await bot.sendMessage(chatId, "Успешное изменение произошло!", {
+            await bot.sendMessage(chatId, "Изменено успешно😊!", {
               reply_markup: {
                 keyboard: [
                   [{ text: "🔝 Главное меню" }, { text: "🔙 Возвращаться" }],
@@ -481,7 +481,7 @@ bot.on("message", async (msg) => {
           }
         } else  if (change.text == "Имя") {
           users[chatId].username = msg.text;
-          await bot.sendMessage(chatId, "Успешное изменение произошло!", {
+          await bot.sendMessage(chatId, "Изменено успешно😊!!", {
             reply_markup: {
               keyboard: [
                 [{ text: "🔝 Главное меню" }, { text: "🔙 Возвращаться" }],
@@ -495,7 +495,7 @@ bot.on("message", async (msg) => {
           if (msg.text.length == 9 && !isNaN(+msg.text)) {
             users[chatId].inn = msg.text;
             step++;
-            await bot.sendMessage(chatId, "Successful change!", {
+            await bot.sendMessage(chatId, "Changed successfully😊!", {
               reply_markup: {
                 keyboard: [
                   [{ text: "🔝 Main menu" }, { text: "🔙 Go back" }],
@@ -516,7 +516,7 @@ bot.on("message", async (msg) => {
             users[chatId].contact = msg.text;
             step++;
   
-            await bot.sendMessage(chatId, "Successful change!", {
+            await bot.sendMessage(chatId, "Changed successfully😊!", {
               reply_markup: {
                 keyboard: [
                   [{ text: "🔝 Main menu" }, { text: "🔙 Go back" }],
@@ -533,7 +533,7 @@ bot.on("message", async (msg) => {
         }
         else if (change.text == "Name") {
           users[chatId].username = msg.text;
-          await bot.sendMessage(chatId, "Successful change!", {
+          await bot.sendMessage(chatId, "Changed successfully😊!", {
             reply_markup: {
               keyboard: [
                 [{ text: "🔝  Main menu" }, { text: "🔙 Go back" }],
@@ -591,15 +591,15 @@ bot.on("message", async (msg) => {
     } else if (step === 4 && msg.text === "📞 Aloqa") {
       await bot.sendMessage(
         chatId,
-        "Biz bilan bog'lanish uchun! \n📞 +998931636006"
+        "Biz bilan bog'lanish uchun: \n📞 +998931636006"
       );
     } else if (step === 4 && msg.text === "📞 Контакт") {
       await bot.sendMessage(
         chatId,
-        "Чтобы связаться с нами!\n📞 +998931636006"
+        "Чтобы связаться с нами:\n📞 +998931636006"
       );
     } else if (step === 4 && msg.text === "📞 Contact") {
-      await bot.sendMessage(chatId, "To contact us! \n📞 +998931636006");
+      await bot.sendMessage(chatId, "To contact us: \n📞 +998931636006");
     } else if (step === 4 && msg.text === "Biz haqimizda 📌") {
       await bot.sendMediaGroup(chatId, [
         {
@@ -620,7 +620,7 @@ bot.on("message", async (msg) => {
       ]);
       await bot.sendMessage(
         chatId,
-        `«Yangi Yo'l tekstil» masʼuliyati cheklangan jamiyati Oʻzbekiston bozoridagi yirik ip-kalava ishlab chiqaruvchi korxonalardan biridir. \nZamonaviy texnologik, qurilish-montaj me’yorlariga javob beradigan to‘qimachilik majmuasi 2019-yildan buyon faoliyat yuritib kelmoqda. \n«Karde» yigiruv fabrikasining ishlab chiqarish quvvati yiliga 7200 tonna trikotaj jun ishlab chiqarishni tashkil etadi.`
+        `«Yangi Yo'l tekstil» masʼuliyati cheklangan jamiyati Oʻzbekiston bozoridagi yirik ip-kalava ishlab chiqaruvchi korxonalardan biridir. \n\nZamonaviy texnologik, qurilish-montaj me’yorlariga javob beradigan to‘qimachilik majmuasi 2019-yildan buyon faoliyat yuritib kelmoqda.\n\n«Karde» yigiruv fabrikasining ishlab chiqarish quvvati yiliga 7200 tonna trikotaj jun ishlab chiqarishni tashkil etadi.`
       );
     } else if (step === 4 && msg.text === "O нас 📌") {
       await bot.sendMediaGroup(chatId, [
@@ -643,7 +643,7 @@ bot.on("message", async (msg) => {
 
       await bot.sendMessage(
         chatId,
-        `Общество с ограниченной ответственностью «Янги Ел текстиль» является одним из крупнейших предприятий по производству пряжи на рынке Узбекистана. \nТекстильный комплекс, соответствующий современным технологическим, строительным и монтажным стандартам, работает с 2019 года. \nПроизводственная мощность прядильной фабрики «Карде» составляет 7200 тонн трикотажной шерсти в год.`
+        `Общество с ограниченной ответственностью «Янги Ел текстиль» является одним из крупнейших предприятий по производству пряжи на рынке Узбекистана. \n\nТекстильный комплекс, соответствующий современным технологическим, строительным и монтажным стандартам, работает с 2019 года. \n\nПроизводственная мощность прядильной фабрики «Карде» составляет 7200 тонн трикотажной шерсти в год.`
       );
     } else if (step === 4 && msg.text === "About us 📌") {
       await bot.sendMediaGroup(chatId, [
@@ -666,7 +666,7 @@ bot.on("message", async (msg) => {
 
       await bot.sendMessage(
         chatId,
-        `«Yangi Yol textile» limited liability company is one of the largest yarn-producing enterprises in the market of Uzbekistan. \nThe textile complex, which meets modern technological, construction and assembly standards, has been operating since 2019. \nThe production capacity of the «Karde» spinning factory is 7200 tons of knitted wool per year.`
+        `«Yangi Yol textile» limited liability company is one of the largest yarn-producing enterprises in the market of Uzbekistan. \n\nThe textile complex, which meets modern technological, construction and assembly standards, has been operating since 2019. \n\nThe production capacity of the «Karde» spinning factory is 7200 tons of knitted wool per year.`
       );
     } else if (
       (step === 5 && ["20/1", "24/1", "30/1"].includes(msg.text)) ||
@@ -684,7 +684,7 @@ bot.on("message", async (msg) => {
       if (size == "20/1") {
         if (language == "🇺🇿") {
           await bot.sendPhoto(chatId, 'https://cpimg.tistatic.com/08646304/b/4/TFO-Cotton-Yarn.jpg', {
-         caption: `0-10 tonna: $2.65 + QQS\n11-50 tonna: $2.63 + QQS\n51-♾️ tonna: $2.60 + QQS`,
+         caption: `1-10 tonna: $2.65 + QQS\n11-50 tonna: $2.63 + QQS\n51-♾️ tonna: $2.60 + QQS`,
           });
 
           await bot.sendMessage(
@@ -701,7 +701,7 @@ bot.on("message", async (msg) => {
           );
         }    else if (language == "🇷🇺") {
           await bot.sendPhoto(chatId, 'https://cpimg.tistatic.com/08646304/b/4/TFO-Cotton-Yarn.jpg', {
-         caption: `0-10 тонны: $2.65 + НДС \n11-50 тонны: $2.63 + НДС \n51-♾️ тонны: $2.60 + НДС`,
+         caption: `1-10 тонны: $2.65 + НДС \n11-50 тонны: $2.63 + НДС \n51-♾️ тонны: $2.60 + НДС`,
           });
           await bot.sendMessage(
             chatId,
@@ -716,7 +716,7 @@ bot.on("message", async (msg) => {
           );
         } else if (language == "🇬🇧") {
           await bot.sendPhoto(chatId, 'https://cpimg.tistatic.com/08646304/b/4/TFO-Cotton-Yarn.jpg', {
-         caption: `0-10 tons: $2.65  \n11-50 tons: $2.63  \n51-♾️ tons: $2.60 `,
+         caption: `1-10 tons: $2.65  \n11-50 tons: $2.63  \n51-♾️ tons: $2.60 `,
           });
           await bot.sendMessage(
             chatId,
@@ -734,7 +734,7 @@ bot.on("message", async (msg) => {
       if (size == "24/1") {
         if (language == "🇺🇿") {
           await bot.sendPhoto(chatId, 'https://5.imimg.com/data5/SELLER/Default/2022/11/QP/KI/QW/62771344/combed-cotton-yarn-500x500.jpg', {
-         caption: `0-10 tonna: $2.70 + QQS \n11-50 tonna: $2.68 + QQS \n51-♾️ tonna: $2.65 + QQS`,
+         caption: `1-10 tonna: $2.70 + QQS \n11-50 tonna: $2.68 + QQS \n51-♾️ tonna: $2.65 + QQS`,
           });
            
           await bot.sendMessage(
@@ -750,7 +750,7 @@ bot.on("message", async (msg) => {
           );
         } else if (language == "🇷🇺") {
           await bot.sendPhoto(chatId, 'https://5.imimg.com/data5/SELLER/Default/2022/11/QP/KI/QW/62771344/combed-cotton-yarn-500x500.jpg', {
-            caption: `0-10 тонны: $2.70 + НДС \n11-50 тонны: $2.68 + НДС \n51-♾️ тонны: $2.65 + НДС`,
+            caption: `1-10 тонны: $2.70 + НДС \n11-50 тонны: $2.68 + НДС \n51-♾️ тонны: $2.65 + НДС`,
              });
           await bot.sendMessage(
             chatId,
@@ -765,7 +765,7 @@ bot.on("message", async (msg) => {
           );
         } else if (language == "🇬🇧") {
           await bot.sendPhoto(chatId, 'https://5.imimg.com/data5/SELLER/Default/2022/11/QP/KI/QW/62771344/combed-cotton-yarn-500x500.jpg', {
-            caption: `0-10 tons: $2.70  \n11-50 tons: $2.68  \n51-♾️ tons: $2.65 `,
+            caption: `1-10 tons: $2.70  \n11-50 tons: $2.68  \n51-♾️ tons: $2.65 `,
              });
           await bot.sendMessage(
             chatId,
@@ -784,7 +784,7 @@ bot.on("message", async (msg) => {
       if (size == "30/1") {
         if (language == "🇺🇿") {
           await bot.sendPhoto(chatId, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8PPzkMmSESnLNCTuSc81M9vfidxHqixfucw&usqp=CAU', {
-            caption: `0-10 tonna: $2.75 + QQS \n11-50 tonna: $2.73 + QQS \n51-♾️ tonna: $2.70 + QQS`,
+            caption: `1-10 tonna: $2.75 + QQS \n11-50 tonna: $2.73 + QQS \n51-♾️ tonna: $2.70 + QQS`,
              });
           await bot.sendMessage(
             msg.chat.id,
@@ -799,7 +799,7 @@ bot.on("message", async (msg) => {
           );
         } else if (language == "🇷🇺") {
           await bot.sendPhoto(chatId, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8PPzkMmSESnLNCTuSc81M9vfidxHqixfucw&usqp=CAU', {
-            caption: `0-10 тонны: $2.75 + НДС \n11-50 тонны: $2.73 + НДС \n51-♾️ тонны: $2.70 + НДС`,
+            caption: `1-10 тонны: $2.75 + НДС \n11-50 тонны: $2.73 + НДС \n51-♾️ тонны: $2.70 + НДС`,
              });
           await bot.sendMessage(
             chatId,
@@ -814,7 +814,7 @@ bot.on("message", async (msg) => {
           );
         } else if (language == "🇬🇧") {
           await bot.sendPhoto(chatId, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8PPzkMmSESnLNCTuSc81M9vfidxHqixfucw&usqp=CAU', {
-            caption: `0-10 тонны: $2.75  \n11-50 тонны: $2.73  \n51-♾️ тонны: $2.70 `,
+            caption: `1-10 тонны: $2.75  \n11-50 тонны: $2.73  \n51-♾️ тонны: $2.70 `,
              });
           await bot.sendMessage(
             msg.chat.id,
@@ -838,7 +838,7 @@ bot.on("message", async (msg) => {
         let { size } = users[chatId].order;
         users[chatId]["order"]["weight"] = weight;
         if (size === "20/1") {
-          if (weight >= 0 && weight < 10) {
+          if (weight >= 1 && weight < 10) {
             price = "$2.65";
           } else if (weight > 10 && weight < 50) {
             price = "$2.63";
@@ -846,7 +846,7 @@ bot.on("message", async (msg) => {
             price = "$2.60";
           }
         } else if (size === "24/1") {
-          if (weight >= 0 && weight < 10) {
+          if (weight >= 1 && weight < 10) {
             price = "$2.70";
           } else if (weight >= 10 && weight < 50) {
             price = "$2.68";
@@ -854,7 +854,7 @@ bot.on("message", async (msg) => {
             price = "$2.65";
           }
         } else if (size === "30/1") {
-          if (weight >= 0 && weight < 10) {
+          if (weight >= 1 && weight < 10) {
             price = "$2.75";
           } else if (weight >= 10 && weight < 50) {
             price = "$2.73";
