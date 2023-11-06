@@ -1070,12 +1070,12 @@ bot.on("contact", async (msg) => {
     users[id]["link"] = link;
   
     if (language == "🇺🇿") {
-      await bot.sendMessage(id, "Kompaniyangizning INN raqamini kiriting!");
+      await bot.sendMessage(id, "Kompaniyangizning INN raqamini kiriting!\nFormat:123456789");
     } else if (language == "🇷🇺") {
-      await bot.sendMessage(id, "Введите ИНН вашей компании!");
+      await bot.sendMessage(id, "Введите ИНН вашей компании!\nФормат:123456789");
 
     } else if (language == "🇬🇧") {
-      await bot.sendMessage(id, "Enter the INN number of your company!");
+      await bot.sendMessage(id, "Enter the INN number of your company!\nFormat:123456789");
     }
     step++;
   } catch (error) {
